@@ -1,0 +1,19 @@
+{
+  "LayoutSection": "Change the order of the sections in the home page (Drag & Drop)",
+  "header_fixed": "Header is Fixed ***",
+  "footer_fixed": "Footer is Fixed ***",
+  "statistics": "Statistics Section",
+  "impressive_topics": "High Impressive Topics",
+  "main_design": "Main Designs",
+  "features": "Features Section",
+  "parallax_variation": "Parallax Variation",
+  "parallax_support": "Parallaz Support",
+  "info": "Info Section",
+  "clients": "Clients reviews",
+  "primary_color": "Primary Color",
+  "save": "Save",
+  "font_Family": "Font Family",
+  "font_Size": "Font Size",
+  "LayoutTitle": "Change from here these values and see the reflects on home page immediately",
+  "layoutPop": "Click Here to change The Style Dynamically"
+}

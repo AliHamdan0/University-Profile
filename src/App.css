@@ -1,38 +1,218 @@
-.App {
+* {
+  box-sizing: border-box;
+}
+.imgText {
+  position: absolute;
+  bottom: -100px;
+  background: #fff;
+  box-shadow: 0px 1px 3px grey;
+  width: 100%;
   text-align: center;
+  padding: 15px 8px;
+  transition: 0.5s;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.ThemeCont:hover .imgTheme {
+  transform: scale(1.05);
+  transition: 0.5s;
+  cursor: pointer;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.ThemeCont:hover .imgMove {
+  bottom: 0px !important;
+  transition: 0.5s;
+}
+.ThemeCont:hover .imgTHLayout {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  background-color: #0000ff1a;
+}
+.itemTabTxt {
+  background: #fff;
+  box-shadow: 0px 1px 3px grey;
+  width: 100%;
+  text-align: center;
+  padding: 15px 8px;
+}
+.tabItemAnimate {
+  animation: ItemTabAni;
+  animation-duration: 0.8s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+@keyframes ItemTabAni {
+  0% {
+    width: 0px;
+    transform: translate(400px, 400px);
+  }
+  100% {
+    width: 100%;
+    transform: translate(0px, 0px);
   }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.tabHomeAnimate {
+  animation: ItemHomeAni;
+  animation-duration: 0.8s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+@keyframes ItemHomeAni {
+  0% {
+    transform: scale(0);
+    transform-origin: center;
+  }
+  100% {
+    transform: scale(1);
+    transform-origin: center;
+  }
+}
+.tabItemEndAnimate {
+  animation: ItemEndTabAni;
+  animation-duration: 0.8s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+@keyframes ItemEndTabAni {
+  0% {
+    width: 0px;
+    transform: translate(-400px, 400px);
+  }
+  100% {
+    width: 100%;
+    transform: translate(0px, 0px);
+  }
+}
+.paraTitle {
+  position: relative;
+  width: fit-content;
+  margin: 35px auto;
+  width: 15%;
+  height: 3px;
 }
 
-.App-link {
-  color: #61dafb;
+.showBtn {
+  animation: showB;
+  animation-duration: 0.4s;
+  animation-delay: 0.8s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  visibility: hidden;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@keyframes showB {
+  0% {
+    transform: scale(0);
+    visibility: visible;
   }
-  to {
-    transform: rotate(360deg);
+  100% {
+    transform: scale(1);
+    visibility: visible;
   }
+}
+.NshowBtn {
+  animation: showNB;
+  animation-duration: 0.4s;
+  animation-delay: 0.8s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  visibility: hidden;
+}
+@keyframes showNB {
+  0% {
+    transform: scale(0);
+    visibility: visible;
+  }
+  100% {
+    transform: scale(1);
+    visibility: visible;
+  }
+}
+.layout {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  top: 0px;
+  background-color: #00000046;
+}
+.underSeperator {
+  position: relative;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.underSeperator::before {
+  content: "";
+  position: absolute;
+  width: 5vw;
+  height: 3px;
+  background-color: var(--chakra-colors-chakra-body-text);
+  margin: auto;
+  left: 50%;
+  right: 50%;
+  transform: translate(-50%, 0px);
+}
+.SunderSeperator {
+  position: relative;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.SunderSeperator::before {
+  content: "";
+  position: absolute;
+  width: 5vw;
+  height: 3px;
+  background-color: var(--chakra-colors-chakra-body-text);
+}
+/*For Clients Carsoul*/
+.clientSwipper {
+  min-height: 420px;
+}
+.clientSwipper div:nth-child(2) {
+  bottom: 1px;
+}
+.rotR {
+  animation: rt;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+}
+@keyframes rt {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(180deg);
+  }
+}
+.RotL {
+  animation: lt;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+}
+@keyframes lt {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(180deg);
+  }
+}
+/*Mode Switch in RTL*/
+.modeTogle {
+  height: 36px !important;
+}
+.modeW {
+  /* just in arabic direction: to fix overflow; */
+  width: auto !important;
+}
+/*Mode Swithc End*/
+.overlay {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  /* background-color: #00000033; */
+  background-color: #00000041;
 }

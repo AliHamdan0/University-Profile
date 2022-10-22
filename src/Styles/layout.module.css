@@ -1,0 +1,11 @@
+.headLayImg {
+  background-image: url("../../public/imgs/layout.jpg");
+  background-size: cover;
+  min-height: 180px;
+  background-position: center;
+}
+.layCard {
+  align-items: center;
+  border-bottom: 1px solid #8080804d;
+  cursor: pointer;
+}

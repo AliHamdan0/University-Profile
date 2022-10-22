@@ -1,24 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
-
+import "./App.css";
+import { Home } from "./Pages/Home";
+import { Route, Routes } from "react-router-dom";
+import { Layout } from "./Pages/Layout";
+import { useTheme } from "./Theme/Theme";
+import { ChakraProvider } from "@chakra-ui/react";
+import { RtlProvider } from "./rtlProvider/rtl-provider";
+import { ColorModeScript } from "@chakra-ui/react";
 function App() {
+  const [Theme] = useTheme();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ChakraProvider theme={Theme}>
+      <RtlProvider>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/layout" element={<Layout />} />
+        </Routes>
+        <ColorModeScript initialColorMode={Theme.config.initialColorMode} />
+      </RtlProvider>
+    </ChakraProvider>
   );
 }
 
